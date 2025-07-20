@@ -14,7 +14,10 @@ struct CoinsView: View {
             List{
                 ForEach(ViewModel.coin){Coin in
                     NavigationLink(value: Coin) {
-                        Text(Coin.name)
+                        VStack(alignment:.leading){ Text(Coin.name)
+                            Text(Coin.symbol)
+                                .foregroundStyle(Color(.systemGray))
+                        }
                     }
                 }
             }
